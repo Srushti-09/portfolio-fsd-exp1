@@ -430,6 +430,36 @@ ul {
   }
 }
 
+.hero-shape-glass {
+  width: 350px;
+  height: 350px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(0, 229, 255, 0.1) 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  animation: morph 8s ease-in-out infinite, float 6s ease-in-out infinite;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), inset 0 0 20px rgba(0, 229, 255, 0.2);
+}
+
+@keyframes morph {
+  0% {
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  }
+
+  34% {
+    border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%;
+  }
+
+  67% {
+    border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+  }
+
+  100% {
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  }
+}
+
 /* ================================================================
    SKILLS MARQUEE (CSS Only Infinite Scroll)
    ================================================================ */
@@ -499,8 +529,16 @@ ul {
    ================================================================ */
 .about-grid {
   padding: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 3rem;
+}
+
+.about-image-wrap {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .about-text h3 {
@@ -577,6 +615,7 @@ ul {
   padding: 2px;
   background: linear-gradient(135deg, var(--cyan), transparent, var(--accent));
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   opacity: 0;
@@ -953,6 +992,14 @@ ul {
 }
 
 @media (max-width: 768px) {
+  body:has(#nav-toggle:checked) {
+    overflow: hidden;
+  }
+
+  .site-header {
+    padding: 1rem 1.5rem;
+  }
+
   .nav-toggle-label {
     display: flex;
     z-index: 1010;
@@ -972,6 +1019,11 @@ ul {
     transform: translateX(100%);
     transition: transform 0.4s cubic-bezier(.25, 1, .5, 1);
     border-left: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .nav-links a {
+    font-size: 1.5rem;
+    padding: 1rem 0;
   }
 
   .nav-toggle:checked~.nav-links {
@@ -1020,6 +1072,38 @@ ul {
   .hero-title {
     font-size: clamp(2.5rem, 10vw, 3.5rem);
   }
+
+  .hero {
+    padding-top: 6rem;
+    gap: 2rem;
+  }
+
+  .hero-visual {
+    height: 300px;
+  }
+
+  .hero-shape-glass {
+    width: 250px;
+    height: 250px;
+  }
+
+  .blob-1 {
+    width: 200px;
+    height: 200px;
+  }
+
+  .blob-2 {
+    width: 150px;
+    height: 150px;
+  }
+
+  .section {
+    padding: 4rem 1.2rem;
+  }
+
+  .about-image-wrap {
+    margin-bottom: 2rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1034,5 +1118,10 @@ ul {
 
   .marquee-item {
     font-size: 1.8rem;
+  }
+
+  .hero-shape-glass {
+    width: 200px;
+    height: 200px;
   }
 }
