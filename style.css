@@ -36,6 +36,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 body {
@@ -119,7 +120,7 @@ ul {
 
 .section-heading {
   font-family: var(--font-heading);
-  font-size: clamp(2.5rem, 6vw, 3.5rem);
+  font-size: clamp(2rem, 6vw, 3.5rem);
   font-weight: 800;
   color: var(--white);
   text-transform: uppercase;
@@ -336,7 +337,7 @@ ul {
 
 .hero-title {
   font-family: var(--font-heading);
-  font-size: clamp(3rem, 7vw, 5rem);
+  font-size: clamp(2.2rem, 8vw, 5rem);
   font-weight: 800;
   line-height: 1;
   color: var(--white);
@@ -721,7 +722,7 @@ ul {
 
 .contact-heading {
   font-family: var(--font-heading);
-  font-size: clamp(3rem, 5vw, 4rem);
+  font-size: clamp(2.5rem, 6vw, 4rem);
   font-weight: 800;
   line-height: 1.1;
   color: var(--white);
@@ -986,6 +987,21 @@ ul {
   }
 
   .about-grid,
+  .contact-split,
+  .grid-2,
+  .contact-form,
+  .about-stats,
+  .contact-info-grid {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+  }
+
+  .contact-left {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .about-grid,
   .contact-glass-container {
     padding: 2.5rem;
   }
@@ -1070,7 +1086,7 @@ ul {
   }
 
   .hero-title {
-    font-size: clamp(2.5rem, 10vw, 3.5rem);
+    font-size: clamp(2rem, 10vw, 3.5rem);
   }
 
   .hero {
@@ -1116,12 +1132,26 @@ ul {
     border-radius: 120px;
   }
 
-  .marquee-item {
-    font-size: 1.8rem;
-  }
-
   .hero-shape-glass {
     width: 200px;
     height: 200px;
+  }
+
+  .marquee-item {
+    font-size: 1.5rem;
+    padding: 0 1.5rem;
+  }
+
+  .section {
+    padding: 3rem 1rem;
+  }
+
+  .contact-left,
+  .contact-right {
+    padding: 2rem 1.5rem;
+  }
+
+  .project-card .card-body {
+    padding: 1.5rem;
   }
 }
