@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Srushti Murade — Designer, Researcher, Engineer & Creative Thinker. Crafting experiences where creativity meets technology." />
+    <meta name="keywords"
+        content="Srushti Murade, Designer, UI/UX, Product Design, Creative Technologist, Portfolio" />
+    <meta name="author" content="Srushti Murade" />
+    <meta property="og:title" content="Srushti Murade — Designer & Creative Engineer" />
+    <meta property="og:description"
+        content="I don't just build products. I design experiences people remember." />
+    <meta property="og:type" content="website" />
+    <title>Srushti Murade — Designer &amp; Creative Engineer</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="loading">
+
+    <!-- ===== LOADING SCREEN ===== -->
+    <div id="loading-screen">
+        <canvas id="stars-canvas"></canvas>
+
+        <div class="loading-planet loading-planet-1"></div>
+        <div class="loading-planet loading-planet-2"></div>
+        <div class="loading-planet loading-planet-3"></div>
+
+        <div class="rocket-container" id="rocket">
+            <svg class="rocket-svg" viewBox="0 0 60 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Rocket body -->
+                <path d="M30 2 C30 2 12 30 12 78 L18 98 L42 98 L48 78 C48 30 30 2 30 2Z" fill="#FAF8F5"
+                    stroke="rgba(255,255,255,0.2)" stroke-width="0.5" />
+                <!-- Window -->
+                <circle cx="30" cy="48" r="9" fill="#7B5EA7" opacity="0.9" />
+                <circle cx="30" cy="48" r="5" fill="#E8DFF5" opacity="0.5" />
+                <!-- Left fin -->
+                <path d="M12 78 L2 100 L18 94Z" fill="#7B5EA7" />
+                <!-- Right fin -->
+                <path d="M48 78 L58 100 L42 94Z" fill="#7B5EA7" />
+                <!-- Flame -->
+                <path class="rocket-flame" d="M22 98 L30 128 L38 98Z" fill="#C4A97D" />
+                <path class="rocket-flame" d="M25 98 L30 118 L35 98Z" fill="#E8A838" opacity="0.8" />
+            </svg>
+            <!-- Smoke particles -->
+            <div class="smoke-particle"></div>
+            <div class="smoke-particle"></div>
+            <div class="smoke-particle"></div>
+            <div class="smoke-particle"></div>
+            <div class="smoke-particle"></div>
+        </div>
+
+        <div class="loading-moon" id="loading-moon"></div>
+        <div class="loading-logo" id="loading-logo">SM</div>
+
+        <div class="loading-text" id="loading-text">
+            <div class="loading-name" id="loading-name">SRUSHTI MURADE</div>
+            <div class="loading-role" id="loading-role"></div>
+        </div>
+
+        <button class="loading-skip" id="skip-loading" onclick="skipLoading()">Skip →</button>
+    </div>
+
+    <!-- ===== CUSTOM CURSOR ===== -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-ring" id="cursor-ring"></div>
+    <div class="cursor-text" id="cursor-text">View</div>
+
+    <!-- ===== BACKGROUND ===== -->
+    <canvas id="particles-canvas"></canvas>
+    <div class="cursor-glow" id="cursor-glow"></div>
+
+    <!-- ===== NAVIGATION ===== -->
+    <header class="site-nav" id="site-nav">
+        <a href="#hero" class="nav-logo">Srushti<span class="nav-logo-dot">.</span></a>
+
+        <nav class="nav-links">
+            <a href="#about">About</a>
+            <a href="#skills-section">Skills</a>
+            <a href="#projects">Work</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="nav-toggle" id="nav-toggle" role="button" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="#about" class="mobile-link">About</a>
+        <a href="#skills-section" class="mobile-link">Skills</a>
+        <a href="#projects" class="mobile-link">Work</a>
+        <a href="#achievements" class="mobile-link">Achievements</a>
+        <a href="#gallery" class="mobile-link">Gallery</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+    </div>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-label reveal">
+                    <span class="hero-label-dot"></span>
+                    Creative Designer &amp; Engineer
+                </div>
+                <h1 class="hero-title reveal">
+                    I don't just build products.<br />
+                    I design experiences<br />
+                    people <em>remember.</em>
+                </h1>
+                <p class="hero-subtitle reveal">
+                    Computer Engineering student blending creativity with technology.
+                    Designer, researcher, storyteller, and builder — crafting products
+                    that make a real difference.
+                </p>
+                <a href="#projects" class="hero-cta magnetic-btn reveal">
+                    <span>Explore My Journey</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="hero-portrait">
+                <div class="portrait-frame">
+                    <img src="assets/srushti_main.jpg" alt="Srushti Murade" />
+                </div>
+                <div class="floating-elements">
+                    <span class="floating-el" aria-hidden="true">🎨</span>
+                    <span class="floating-el" aria-hidden="true">📷</span>
+                    <span class="floating-el" aria-hidden="true">💻</span>
+                    <span class="floating-el" aria-hidden="true">🎸</span>
+                    <span class="floating-el" aria-hidden="true">✏️</span>
+                    <span class="floating-el" aria-hidden="true">🎬</span>
+                    <span class="floating-el" aria-hidden="true">🧶</span>
+                    <span class="floating-el" aria-hidden="true">📐</span>
+                    <span class="floating-el" aria-hidden="true">🔬</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- ===== MARQUEE ===== -->
+    <div class="marquee-section">
+        <div class="marquee-track">
+            <span class="marquee-item">Designer</span>
+            <span class="marquee-star">✦</span>
+            <span class="marquee-item">Researcher</span>
+            <span class="marquee-star">✦</span>
+            <span class="marquee-item">Engineer</span>
+            <span class="marquee-star">✦</span>
+            <span class="marquee-item">Leader</span>
+            <span class="marquee-star">✦</span>
+            <span class="marquee-item">Photographer</span>
+            <span class="marquee-star">✦</span>
+            <span class="marquee-item">Storyteller</span>
+            <span class="marquee-star">✦</span>
+            <span class="marquee-item">Creator</span>
+            <span class="marquee-star">✦</span>
+            <span class="marquee-item">Artist</span>
+            <span class="marquee-star">✦</span>
+            <!-- Duplicated for seamless loop -->
+            <span class="marquee-item" aria-hidden="true">Designer</span>
+            <span class="marquee-star" aria-hidden="true">✦</span>
+            <span class="marquee-item" aria-hidden="true">Researcher</span>
+            <span class="marquee-star" aria-hidden="true">✦</span>
+            <span class="marquee-item" aria-hidden="true">Engineer</span>
+            <span class="marquee-star" aria-hidden="true">✦</span>
+            <span class="marquee-item" aria-hidden="true">Leader</span>
+            <span class="marquee-star" aria-hidden="true">✦</span>
+            <span class="marquee-item" aria-hidden="true">Photographer</span>
+            <span class="marquee-star" aria-hidden="true">✦</span>
+            <span class="marquee-item" aria-hidden="true">Storyteller</span>
+            <span class="marquee-star" aria-hidden="true">✦</span>
+            <span class="marquee-item" aria-hidden="true">Creator</span>
+            <span class="marquee-star" aria-hidden="true">✦</span>
+            <span class="marquee-item" aria-hidden="true">Artist</span>
+            <span class="marquee-star" aria-hidden="true">✦</span>
+        </div>
+    </div>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="about section" id="about">
+        <div class="container">
+            <div class="section-label reveal">About Me</div>
+            <h2 class="section-heading reveal">Where creativity<br />meets <em>technology.</em></h2>
+
+            <div class="about-grid">
+                <div class="about-narrative reveal-left">
+                    <h3>I'm Srushti Murade — a Computer Engineering student who designs products, not just websites.</h3>
+                    <p>
+                        With a <span class="highlight">9+ CGPA</span>, I bring the same dedication to design, research,
+                        and creative thinking as I do to engineering. My superpower? Blending technical depth with
+                        creative instinct to build products people genuinely love.
+                    </p>
+                    <p>
+                        Whether I'm leading a hackathon team, designing for TEDx, conducting user interviews with
+                        ASHA workers, or picking up my Canon 1500D — every experience fuels how I approach product
+                        design. I don't just make things look good. I make them <em>feel right</em>.
+                    </p>
+
+                    <div class="interests-cloud">
+                        <span class="interest-tag"><span class="tag-icon">🎨</span>UI/UX Design</span>
+                        <span class="interest-tag"><span class="tag-icon">🔬</span>Research</span>
+                        <span class="interest-tag"><span class="tag-icon">📷</span>Photography</span>
+                        <span class="interest-tag"><span class="tag-icon">🎸</span>Guitar</span>
+                        <span class="interest-tag"><span class="tag-icon">🧶</span>Crochet</span>
+                        <span class="interest-tag"><span class="tag-icon">🖌️</span>Painting</span>
+                        <span class="interest-tag"><span class="tag-icon">🎬</span>Videography</span>
+                        <span class="interest-tag"><span class="tag-icon">💡</span>Product Thinking</span>
+                        <span class="interest-tag"><span class="tag-icon">👥</span>Leadership</span>
+                        <span class="interest-tag"><span class="tag-icon">✍️</span>Content Creation</span>
+                    </div>
+                </div>
+
+                <div class="about-timeline reveal-right">
+                    <div class="timeline-item">
+                        <div class="timeline-year">Current</div>
+                        <div class="timeline-title">B.Tech Computer Engineering</div>
+                        <div class="timeline-desc">Fr. Conceicao Rodrigues College of Engineering · 9+ CGPA</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2024–25</div>
+                        <div class="timeline-title">TEDx CRCE — Design Manager</div>
+                        <div class="timeline-desc">Led design for internship expo and annual conference. Created
+                            posters, banners, IDs, certificates, and full branding system.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2024</div>
+                        <div class="timeline-title">WellSync AI — Top 4 in India</div>
+                        <div class="timeline-desc">IIT Hyderabad national competition. Designed AI healthcare workflow
+                            and user journey that placed in India's top 4.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2024</div>
+                        <div class="timeline-title">Spendrift — Top 15 / 800+ Teams</div>
+                        <div class="timeline-desc">Fintech innovation competition. Led pitch design and ideation for a
+                            retro-inspired financial platform.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">Ongoing</div>
+                        <div class="timeline-title">Continuous Exploration</div>
+                        <div class="timeline-desc">Photography at @capturedbysrush, painting, crochet, guitar,
+                            and building products that matter.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="stats-row reveal">
+                <div class="stat-card">
+                    <div class="stat-number" data-count="9">0</div>
+                    <div class="stat-label">+ CGPA</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-count="8">0</div>
+                    <div class="stat-label">+ Hackathons</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-count="12">0</div>
+                    <div class="stat-label">+ Projects</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section class="skills-section section" id="skills-section">
+        <div class="container">
+            <div class="section-label reveal">Capabilities</div>
+            <h2 class="section-heading reveal">A creative<br /><em>constellation.</em></h2>
+            <p class="section-subheading reveal">Hover over the orbs to explore my skill universe.
+                Design, technology, leadership, and creativity — all interconnected.</p>
+
+            <div class="skills-constellation reveal-scale" id="skills-constellation">
+                <canvas class="skills-canvas-bg" id="skills-canvas"></canvas>
+
+                <!-- Design skills -->
+                <div class="skill-orb" data-category="design" style="top:12%;left:35%">
+                    <div class="skill-orb-circle">🎨</div>
+                    <span class="skill-orb-label">UI/UX Design</span>
+                </div>
+                <div class="skill-orb" data-category="design" style="top:8%;left:55%">
+                    <div class="skill-orb-circle">📐</div>
+                    <span class="skill-orb-label">Figma</span>
+                </div>
+                <div class="skill-orb" data-category="design" style="top:25%;left:20%">
+                    <div class="skill-orb-circle">🖼️</div>
+                    <span class="skill-orb-label">Graphic Design</span>
+                </div>
+                <div class="skill-orb" data-category="design" style="top:22%;left:68%">
+                    <div class="skill-orb-circle">✨</div>
+                    <span class="skill-orb-label">Canva</span>
+                </div>
+
+                <!-- Tech skills -->
+                <div class="skill-orb" data-category="tech" style="top:42%;left:10%">
+                    <div class="skill-orb-circle">⚛️</div>
+                    <span class="skill-orb-label">React</span>
+                </div>
+                <div class="skill-orb" data-category="tech" style="top:55%;left:25%">
+                    <div class="skill-orb-circle">🌐</div>
+                    <span class="skill-orb-label">Next.js</span>
+                </div>
+                <div class="skill-orb" data-category="tech" style="top:38%;left:78%">
+                    <div class="skill-orb-circle">💛</div>
+                    <span class="skill-orb-label">JavaScript</span>
+                </div>
+                <div class="skill-orb" data-category="tech" style="top:50%;left:65%">
+                    <div class="skill-orb-circle">🎭</div>
+                    <span class="skill-orb-label">Tailwind CSS</span>
+                </div>
+                <div class="skill-orb" data-category="tech" style="top:45%;left:45%">
+                    <div class="skill-orb-circle">🤖</div>
+                    <span class="skill-orb-label">AI Tools</span>
+                </div>
+
+                <!-- Leadership skills -->
+                <div class="skill-orb" data-category="leadership" style="top:68%;left:15%">
+                    <div class="skill-orb-circle">👥</div>
+                    <span class="skill-orb-label">Team Leadership</span>
+                </div>
+                <div class="skill-orb" data-category="leadership" style="top:72%;left:50%">
+                    <div class="skill-orb-circle">📊</div>
+                    <span class="skill-orb-label">Project Management</span>
+                </div>
+                <div class="skill-orb" data-category="leadership" style="top:65%;left:75%">
+                    <div class="skill-orb-circle">🎤</div>
+                    <span class="skill-orb-label">Pitching</span>
+                </div>
+                <div class="skill-orb" data-category="leadership" style="top:78%;left:35%">
+                    <div class="skill-orb-circle">💬</div>
+                    <span class="skill-orb-label">Communication</span>
+                </div>
+
+                <!-- Creative skills -->
+                <div class="skill-orb" data-category="creative" style="top:85%;left:55%">
+                    <div class="skill-orb-circle">📷</div>
+                    <span class="skill-orb-label">Photography</span>
+                </div>
+                <div class="skill-orb" data-category="creative" style="top:88%;left:20%">
+                    <div class="skill-orb-circle">🎬</div>
+                    <span class="skill-orb-label">Videography</span>
+                </div>
+                <div class="skill-orb" data-category="creative" style="top:35%;left:90%">
+                    <div class="skill-orb-circle">🔍</div>
+                    <span class="skill-orb-label">Research</span>
+                </div>
+                <div class="skill-orb" data-category="creative" style="top:82%;left:80%">
+                    <div class="skill-orb-circle">🚀</div>
+                    <span class="skill-orb-label">Fast Learning</span>
+                </div>
+                <div class="skill-orb" data-category="creative" style="top:58%;left:88%">
+                    <div class="skill-orb-circle">🎯</div>
+                    <span class="skill-orb-label">Presentation</span>
+                </div>
+            </div>
+
+            <div class="skills-legend reveal">
+                <div class="skills-legend-item">
+                    <span class="skills-legend-dot design"></span> Design
+                </div>
+                <div class="skills-legend-item">
+                    <span class="skills-legend-dot tech"></span> Technology
+                </div>
+                <div class="skills-legend-item">
+                    <span class="skills-legend-dot leadership"></span> Leadership
+                </div>
+                <div class="skills-legend-item">
+                    <span class="skills-legend-dot creative"></span> Creative
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section class="projects-section section" id="projects">
+        <div class="container">
+            <div class="section-label reveal">Selected Work</div>
+            <h2 class="section-heading reveal">Projects that tell<br />a <em>story.</em></h2>
+            <p class="section-subheading reveal">Each project is a journey — from research and discovery
+                to design, leadership, and real impact. Click to explore the full case study.</p>
+
+            <div class="projects-list">
+
+                <!-- Project 1: Vaxi Babu -->
+                <article class="project-item reveal" id="project-vaxi-babu">
+                    <div class="project-header" onclick="toggleProject(this)">
+                        <div class="project-number">01</div>
+                        <div class="project-header-info">
+                            <h3 class="project-title">Vaxi Babu</h3>
+                            <span class="project-tags-preview">Research · UI/UX · Healthcare · Voice-First</span>
+                        </div>
+                        <div class="project-achievement">Healthcare Innovation</div>
+                        <div class="project-expand-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <div class="project-details-inner">
+                            <div class="project-hero-image">
+                                <span>Project Visual — Vaxi Babu</span>
+                            </div>
+                            <div class="project-meta-grid">
+                                <div class="project-meta-item">
+                                    <div class="project-meta-label">Role</div>
+                                    <div class="project-meta-value">Research Lead & UI/UX Designer</div>
+                                </div>
+                                <div class="project-meta-item">
+                                    <div class="project-meta-label">Domain</div>
+                                    <div class="project-meta-value">Rural Healthcare</div>
+                                </div>
+                                <div class="project-meta-item">
+                                    <div class="project-meta-label">Key Focus</div>
+                                    <div class="project-meta-value">Voice-First Experience</div>
+                                </div>
+                            </div>
+                            <div class="case-section">
+                                <h4 class="case-section-title">The Challenge</h4>
+                                <p>Rural healthcare workers (ASHA workers) struggle with digital tools due to low literacy and limited smartphone familiarity. We needed a solution that felt natural and accessible — not another complex app.</p>
+                            </div>
+                            <div class="case-section">
+                                <h4 class="case-section-title">Discovery & Research</h4>
+                                <p>Visiting ASHA workers in the field completely reshaped our approach. Through user interviews and contextual inquiry, we discovered that voice interaction was the most intuitive modality. This insight became the foundation of Vaxi Babu — a voice-first rural healthcare platform.</p>
+                            </div>
+                            <div class="case-section">
+                                <h4 class="case-section-title">My Contribution</h4>
+                                <p>Led user research, designed the voice-first UX workflow, created the healthcare interface in collaboration with the Asha Foundation, designed pitch materials, and crafted the project's graphic identity.</p>
+                            </div>
+                            <div class="case-section">
+                                <h4 class="case-section-title">Impact</h4>
+                                <p>Created a prototype that demonstrated how voice-first design can bridge the digital divide in healthcare. The project showed that empathy-driven research leads to fundamentally different — and better — solutions.</p>
+                            </div>
+                            <div class="project-tags">
+                                <span class="project-tag">User Research</span>
+                                <span class="project-tag">User Interviews</span>
+                                <span class="project-tag">UI/UX Design</span>
+                                <span class="project-tag">Voice UI</span>
+                                <span class="project-tag">Healthcare</span>
+                                <span class="project-tag">Pitch Design</span>
+                                <span class="project-tag">Graphic Design</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2: Aajis Care -->
+                <article class="project-item reveal" id="project-aajis-care">
+                    <div class="project-header" onclick="toggleProject(this)">
+                        <div class="project-number">02</div>
+                        <div class="project-header-info">
+                            <h3 class="project-title">Aajis Care</h3>
+                            <span class="project-tags-preview">Community · Research · Human-Centered Design</span>
+                        </div>
+                        <div class="project-achievement">Community Impact</div>
+                        <div class="project-expand-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <div class="project-details-inner">
+                            <div class="project-hero-image"><span>Project Visual — Aajis Care</span></div>
+                            <div class="project-meta-grid">
+                                <div class="project-meta-item">
+                                    <div class="project-meta-label">Role</div>
+                                    <div class="project-meta-value">Researcher & Designer</div>
+                                </div>
+                                <div class="project-meta-item">
+                                    <div class="project-meta-label">Domain</div>
+                                    <div class="project-meta-value">Community Engagement</div>
+                                </div>
+                                <div class="project-meta-item">
+                                    <div class="project-meta-label">Key Focus</div>
+                                    <div class="project-meta-value">Empathy & Human-Centered Design</div>
+                                </div>
+                            </div>
+                            <div class="case-section">
+                                <h4 class="case-section-title">The Challenge</h4>
+                                <p>Engaging communities authentically requires understanding their real needs — not assumptions. The challenge was creating meaningful interaction and creative workshops that genuinely resonate.</p>
+                            </div>
+                            <div class="case-section">
+                                <h4 class="case-section-title">My Contribution</h4>
+                                <p>Conducted community interactions and research, designed and facilitated creative workshops, designed the project website, and led with empathy throughout the collaboration process. Every design decision was grounded in real conversations.</p>
+                            </div>
+                            <div class="case-section">
+                                <h4 class="case-section-title">Impact</h4>
+                                <p>Demonstrated that human-centered design starts with listening. The project reinforced that great products are built through genuine understanding, not just user personas on a whiteboard.</p>
+                            </div>
+                            <div class="project-tags">
+                                <span class="project-tag">Community Research</span>
+                                <span class="project-tag">Creative Workshops</span>
+                                <span class="project-tag">Website Design</span>
+                                <span class="project-tag">Empathy</span>
+                                <span class="project-tag">Team Collaboration</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3: CureConnect -->
+                <article class="project-item reveal" id="project-cureconnect">
+                    <div class="project-header" onclick="toggleProject(this)">
+                        <div class="project-number">03</div>
+                        <div class="project-header-info">
+                            <h3 class="project-title">CureConnect</h3>
+                            <span class="project-tags-preview">Team Leader · Frontend · Healthcare Product</span>
+                        </div>
+                        <div class="project-achievement">Leadership Journey</div>
+                        <div class="project-expand-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <div class="project-details-inner">
+                            <div class="project-hero-image"><span>Project Visual — CureConnect</span></div>
+                            <div class="project-meta-grid">
+                                <div class="project-meta-item">
+                                    <div class="project-meta-label">Role</div>
+                                    <div class="project-meta-value">Team Leader & Frontend Developer</div>
+                                </div>
+                                <div class="project-meta-item">
+                                    <div class="project-meta-label">Domain</div>
+                                    <div class="project-meta-value">Healthcare Technology</div>
+                                </div>
+                                <div class="project-meta-item">
+                                    <div class="project-meta-label">Key Focus</div>
+                                    <div class="project-meta-value">Leadership & Project Management</div>
+                                </div>
+                            </div>
+                            <div class="case-section">
+                                <h4 class="case-section-title">The Challenge</h4>
+                                <p>Building a healthcare product that connects patients, doctors, and resources requires not just technical skills but the ability to coordinate a team, manage scope, and deliver under pressure.</p>
+                            </div>
+                            <div class="case-section">
+                                <h4 class="case-section-title">My Contribution</h4>
+                                <p>Led the entire team as Team Leader, managed project timelines and deliverables, conducted research, and built the frontend. This project was my leadership crucible — learning to balance technical execution with people management.</p>
+                            </div>
+                            <div class="case-section">
+                                <h4 class="case-section-title">Impact</h4>
+                                <p>Delivered a functional healthcare platform and, more importantly, grew as a leader. Learned that the best products come from teams that communicate well and trust each other.</p>
+                            </div>
+                            <div class="project-tags">
+                                <span class="project-tag">Team Leadership</span>
+                                <span class="project-tag">Project Management</span>
+                                <span class="project-tag">Frontend Development</span>
+                                <span class="project-tag">Research</span>
+                                <span class="project-tag">Healthcare</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 4: WellSync AI -->
+                <article class="project-item reveal" id="project-wellsync">
+                    <div class="project-header" onclick="toggleProject(this)">
+                        <div class="project-number">04</div>
+                        <div class="project-header-info">
+                            <h3 class="project-title">WellSync AI</h3>
+                            <span class="project-tags-preview">Research · AI · Workflow Design · UX</span>
+                        </div>
+                        <div class="project-achievement">🏆 Top 4 in India</div>
+                        <div class="project-expand-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <div class="project-details-inner">
+                            <div class="project-hero-image"><span>Project Visual — WellSync AI</span></div>
+                            <div class="project-meta-grid">
+                                <div class="project-meta-item">
+                                    <div class="project-meta-label">Achievement</div>
+                                    <div class="project-meta-value">Top 4 in India — IIT Hyderabad</div>
+                                </div>
+                                <div class="project-meta-item">
+                                    <div class="project-meta-label">Role</div>
+                                    <div class="project-meta-value">Researcher & UX Designer</div>
+                                </div>
+                                <div class="project-meta-item">
+                                    <div class="project-meta-label">Domain</div>
+                                    <div class="project-meta-value">AI-Powered Healthcare</div>
+                                </div>
+                            </div>
+                            <div class="case-section">
+                                <h4 class="case-section-title">The Challenge</h4>
+                                <p>Design an AI-powered healthcare product that's intelligent yet human. The product needed to feel trustworthy and intuitive — AI shouldn't feel like a black box to patients or doctors.</p>
+                            </div>
+                            <div class="case-section">
+                                <h4 class="case-section-title">My Contribution</h4>
+                                <p>Led research into AI healthcare workflows, designed the user journey from initial symptom input to AI-assisted diagnosis, created the product's UX architecture, and delivered the final presentation that earned our Top 4 placement at IIT Hyderabad.</p>
+                            </div>
+                            <div class="case-section">
+                                <h4 class="case-section-title">Impact</h4>
+                                <p>Placed in India's Top 4 out of hundreds of teams nationwide. Proved that thoughtful UX design is what separates a good AI product from a great one.</p>
+                            </div>
+                            <div class="project-tags">
+                                <span class="project-tag">Research</span>
+                                <span class="project-tag">AI Product Planning</span>
+                                <span class="project-tag">User Journey</span>
+                                <span class="project-tag">Workflow Design</span>
+                                <span class="project-tag">Presentation</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 5: Spendrift -->
+                <article class="project-item reveal" id="project-spendrift">
+                    <div class="project-header" onclick="toggleProject(this)">
+                        <div class="project-number">05</div>
+                        <div class="project-header-info">
+                            <h3 class="project-title">Spendrift</h3>
+                            <span class="project-tags-preview">Fintech · Pitch Design · Ideation · Research</span>
+                        </div>
+                        <div class="project-achievement">🏆 Top 15 / 800+ Teams</div>
+                        <div class="project-expand-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <div class="project-details-inner">
+                            <div class="project-hero-image"><span>Project Visual — Spendrift</span></div>
+                            <div class="project-meta-grid">
+                                <div class="project-meta-item">
+                                    <div class="project-meta-label">Achievement</div>
+                                    <div class="project-meta-value">Top 15 out of 800+ teams</div>
+                                </div>
+                                <div class="project-meta-item">
+                                    <div class="project-meta-label">Role</div>
+                                    <div class="project-meta-value">Ideation Lead & Pitch Designer</div>
+                                </div>
+                                <div class="project-meta-item">
+                                    <div class="project-meta-label">Domain</div>
+                                    <div class="project-meta-value">Fintech</div>
+                                </div>
+                            </div>
+                            <div class="case-section">
+                                <h4 class="case-section-title">The Challenge</h4>
+                                <p>Create a fintech product with a distinctive visual identity that stands out among 800+ competing teams. The product needed to be innovative while being presented in a way that captivates judges in minutes.</p>
+                            </div>
+                            <div class="case-section">
+                                <h4 class="case-section-title">My Contribution</h4>
+                                <p>Led the ideation process, designed the retro-inspired visual identity that gave Spendrift its unique character, planned key features, crafted the pitch deck, and conducted market research that validated our approach.</p>
+                            </div>
+                            <div class="case-section">
+                                <h4 class="case-section-title">Impact</h4>
+                                <p>Our retro visual identity became our biggest differentiator. Judges remembered us because we looked and felt different. Secured Top 15 placement globally.</p>
+                            </div>
+                            <div class="project-tags">
+                                <span class="project-tag">Pitch Design</span>
+                                <span class="project-tag">Ideation</span>
+                                <span class="project-tag">Feature Planning</span>
+                                <span class="project-tag">Visual Identity</span>
+                                <span class="project-tag">Research</span>
+                                <span class="project-tag">Fintech</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 6: Justice Grid -->
+                <article class="project-item reveal" id="project-justice-grid">
+                    <div class="project-header" onclick="toggleProject(this)">
+                        <div class="project-number">06</div>
+                        <div class="project-header-info">
+                            <h3 class="project-title">Justice Grid</h3>
+                            <span class="project-tags-preview">Research · Design · Planning · Hackathon</span>
+                        </div>
+                        <div class="project-achievement">SPIT Hackathon</div>
+                        <div class="project-expand-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <div class="project-details-inner">
+                            <div class="project-hero-image"><span>Project Visual — Justice Grid</span></div>
+                            <div class="project-meta-grid">
+                                <div class="project-meta-item">
+                                    <div class="project-meta-label">Event</div>
+                                    <div class="project-meta-value">SPIT Hackathon</div>
+                                </div>
+                                <div class="project-meta-item">
+                                    <div class="project-meta-label">Role</div>
+                                    <div class="project-meta-value">Researcher & Designer</div>
+                                </div>
+                            </div>
+                            <div class="case-section">
+                                <h4 class="case-section-title">My Contribution</h4>
+                                <p>Led research into justice-related workflows, designed the product interface, and planned the project architecture. Applied systematic thinking to break down a complex legal domain into an accessible digital experience.</p>
+                            </div>
+                            <div class="project-tags">
+                                <span class="project-tag">Research</span>
+                                <span class="project-tag">Design</span>
+                                <span class="project-tag">Planning</span>
+                                <span class="project-tag">Hackathon</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 7: ResQDrive -->
+                <article class="project-item reveal" id="project-resqdrive">
+                    <div class="project-header" onclick="toggleProject(this)">
+                        <div class="project-number">07</div>
+                        <div class="project-header-info">
+                            <h3 class="project-title">ResQDrive</h3>
+                            <span class="project-tags-preview">System Thinking · UI/UX · Research · IoT</span>
+                        </div>
+                        <div class="project-achievement">BNB Hackathon</div>
+                        <div class="project-expand-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <div class="project-details-inner">
+                            <div class="project-hero-image"><span>Project Visual — ResQDrive</span></div>
+                            <div class="project-meta-grid">
+                                <div class="project-meta-item">
+                                    <div class="project-meta-label">Event</div>
+                                    <div class="project-meta-value">BNB Hackathon</div>
+                                </div>
+                                <div class="project-meta-item">
+                                    <div class="project-meta-label">Role</div>
+                                    <div class="project-meta-value">System Designer & Researcher</div>
+                                </div>
+                                <div class="project-meta-item">
+                                    <div class="project-meta-label">Domain</div>
+                                    <div class="project-meta-value">Accident Response & Insurance</div>
+                                </div>
+                            </div>
+                            <div class="case-section">
+                                <h4 class="case-section-title">The Challenge</h4>
+                                <p>Design an integrated accident response platform connecting hospitals, insurance providers, and smartwatch data. The system needed to work across multiple stakeholders with different needs and technical capabilities.</p>
+                            </div>
+                            <div class="case-section">
+                                <h4 class="case-section-title">My Contribution</h4>
+                                <p>Conducted research on emergency response workflows, designed the multi-stakeholder UI/UX system, and applied systems thinking to create an architecture that connects smartwatch detection, hospital alerts, and insurance processing into one seamless flow.</p>
+                            </div>
+                            <div class="project-tags">
+                                <span class="project-tag">Research</span>
+                                <span class="project-tag">UI/UX</span>
+                                <span class="project-tag">System Thinking</span>
+                                <span class="project-tag">IoT Integration</span>
+                                <span class="project-tag">Multi-stakeholder Design</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 8: Kala Sahayak -->
+                <article class="project-item reveal" id="project-kala-sahayak">
+                    <div class="project-header" onclick="toggleProject(this)">
+                        <div class="project-number">08</div>
+                        <div class="project-header-info">
+                            <h3 class="project-title">Kala Sahayak</h3>
+                            <span class="project-tags-preview">Gen AI · Product Strategy · Creative Direction</span>
+                        </div>
+                        <div class="project-achievement">Gen AI Hackathon</div>
+                        <div class="project-expand-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <div class="project-details-inner">
+                            <div class="project-hero-image"><span>Project Visual — Kala Sahayak</span></div>
+                            <div class="project-meta-grid">
+                                <div class="project-meta-item">
+                                    <div class="project-meta-label">Event</div>
+                                    <div class="project-meta-value">Generative AI Hackathon</div>
+                                </div>
+                                <div class="project-meta-item">
+                                    <div class="project-meta-label">Role</div>
+                                    <div class="project-meta-value">Product Strategist & Creative Director</div>
+                                </div>
+                                <div class="project-meta-item">
+                                    <div class="project-meta-label">Mission</div>
+                                    <div class="project-meta-value">Helping Indian Artists Sell Artwork</div>
+                                </div>
+                            </div>
+                            <div class="case-section">
+                                <h4 class="case-section-title">The Challenge</h4>
+                                <p>Indian artists struggle to market and sell their work digitally. We envisioned a Generative AI-powered platform that helps artists showcase, price, and sell their artwork to a global audience.</p>
+                            </div>
+                            <div class="case-section">
+                                <h4 class="case-section-title">My Contribution</h4>
+                                <p>Defined the product strategy, led creative direction for the platform's identity, conducted research on artist pain points, and designed the user experience that makes AI accessible to traditional artists.</p>
+                            </div>
+                            <div class="project-tags">
+                                <span class="project-tag">Research</span>
+                                <span class="project-tag">Product Strategy</span>
+                                <span class="project-tag">Creative Direction</span>
+                                <span class="project-tag">Generative AI</span>
+                                <span class="project-tag">Cultural Impact</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 9: TEDx Internship Expo -->
+                <article class="project-item reveal" id="project-tedx-expo">
+                    <div class="project-header" onclick="toggleProject(this)">
+                        <div class="project-number">09</div>
+                        <div class="project-header-info">
+                            <h3 class="project-title">TEDx Internship Expo</h3>
+                            <span class="project-tags-preview">Design Manager · Leadership · Coordination</span>
+                        </div>
+                        <div class="project-achievement">Design Manager</div>
+                        <div class="project-expand-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <div class="project-details-inner">
+                            <div class="project-hero-image"><span>TEDx Internship Expo — Design Work</span></div>
+                            <div class="project-meta-grid">
+                                <div class="project-meta-item">
+                                    <div class="project-meta-label">Role</div>
+                                    <div class="project-meta-value">Design Manager</div>
+                                </div>
+                                <div class="project-meta-item">
+                                    <div class="project-meta-label">Organization</div>
+                                    <div class="project-meta-value">TEDx CRCE</div>
+                                </div>
+                            </div>
+                            <div class="case-section">
+                                <h4 class="case-section-title">My Contribution</h4>
+                                <p>As Design Manager, I created all event collaterals — posters, banners, ID cards — while coordinating with multiple teams. I guided junior designers, managed design props, and ensured every visual element maintained the TEDx brand standard. This role taught me that design leadership is about enabling others to do their best work.</p>
+                            </div>
+                            <div class="project-tags">
+                                <span class="project-tag">Design Management</span>
+                                <span class="project-tag">Poster Design</span>
+                                <span class="project-tag">Banner Design</span>
+                                <span class="project-tag">ID Design</span>
+                                <span class="project-tag">Coordination</span>
+                                <span class="project-tag">Mentoring Juniors</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 10: TEDx Annual Conference -->
+                <article class="project-item reveal" id="project-tedx-conference">
+                    <div class="project-header" onclick="toggleProject(this)">
+                        <div class="project-number">10</div>
+                        <div class="project-header-info">
+                            <h3 class="project-title">TEDx Annual Conference</h3>
+                            <span class="project-tags-preview">Marketing · PR · Branding · Design System</span>
+                        </div>
+                        <div class="project-achievement">Full Brand Ownership</div>
+                        <div class="project-expand-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <div class="project-details-inner">
+                            <div class="project-hero-image"><span>TEDx Annual Conference — Branding</span></div>
+                            <div class="project-meta-grid">
+                                <div class="project-meta-item">
+                                    <div class="project-meta-label">Role</div>
+                                    <div class="project-meta-value">Design & Marketing Lead</div>
+                                </div>
+                                <div class="project-meta-item">
+                                    <div class="project-meta-label">Scope</div>
+                                    <div class="project-meta-value">Full Brand System + Marketing</div>
+                                </div>
+                            </div>
+                            <div class="case-section">
+                                <h4 class="case-section-title">My Contribution</h4>
+                                <p>Took ownership of the entire brand experience — from design system and animation to certificates, offline marketing materials, and sponsorship decks. Led PR efforts, managed registrations, and created a cohesive visual language that carried through every touchpoint of the conference.</p>
+                            </div>
+                            <div class="project-tags">
+                                <span class="project-tag">Marketing & PR</span>
+                                <span class="project-tag">Design System</span>
+                                <span class="project-tag">Branding</span>
+                                <span class="project-tag">Animation</span>
+                                <span class="project-tag">Certificates</span>
+                                <span class="project-tag">Sponsorship</span>
+                                <span class="project-tag">Registration</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 11: Resume Building Workshop -->
+                <article class="project-item reveal" id="project-resume-workshop">
+                    <div class="project-header" onclick="toggleProject(this)">
+                        <div class="project-number">11</div>
+                        <div class="project-header-info">
+                            <h3 class="project-title">Resume Building Workshop</h3>
+                            <span class="project-tags-preview">Brand Design · PR · Coordination</span>
+                        </div>
+                        <div class="project-achievement">Event Design</div>
+                        <div class="project-expand-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <div class="project-details-inner">
+                            <div class="project-hero-image"><span>Resume Workshop — Design</span></div>
+                            <div class="case-section">
+                                <h4 class="case-section-title">My Contribution</h4>
+                                <p>Designed promotional posters and brand identity for the workshop. Managed PR outreach, coordinated Google Meet sessions, and ensured smooth event execution. This project honed my ability to create cohesive event branding under tight timelines.</p>
+                            </div>
+                            <div class="project-tags">
+                                <span class="project-tag">Poster Design</span>
+                                <span class="project-tag">PR</span>
+                                <span class="project-tag">Event Coordination</span>
+                                <span class="project-tag">Brand Design</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 12: Cultural Events -->
+                <article class="project-item reveal" id="project-cultural">
+                    <div class="project-header" onclick="toggleProject(this)">
+                        <div class="project-number">12</div>
+                        <div class="project-header-info">
+                            <h3 class="project-title">Cultural Events &amp; Sports</h3>
+                            <span class="project-tags-preview">Versatility · Community · College Life</span>
+                        </div>
+                        <div class="project-achievement">All-Rounder</div>
+                        <div class="project-expand-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <div class="project-details-inner">
+                            <div class="project-hero-image"><span>Cultural Events & Sports</span></div>
+                            <div class="case-section">
+                                <h4 class="case-section-title">Beyond the Screen</h4>
+                                <p>Great design comes from a rich life. I actively participate in cultural events, sports, and college activities — not because they're resume-worthy, but because they make me a more empathetic, versatile, and well-rounded person. Every experience — from team sports to cultural performances — informs how I approach design and collaboration.</p>
+                            </div>
+                            <div class="project-tags">
+                                <span class="project-tag">Cultural Events</span>
+                                <span class="project-tag">Sports</span>
+                                <span class="project-tag">College Activities</span>
+                                <span class="project-tag">Versatility</span>
+                                <span class="project-tag">Community Building</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ACHIEVEMENTS ===== -->
+    <section class="achievements-section section" id="achievements">
+        <div class="container">
+            <div class="section-label reveal">Recognition</div>
+            <h2 class="section-heading reveal">Milestones along<br />the <em>journey.</em></h2>
+
+            <div class="achievements-grid stagger-children">
+                <div class="achievement-card reveal" style="--i:0">
+                    <span class="achievement-icon">🏆</span>
+                    <div class="achievement-title">Top 4</div>
+                    <div class="achievement-desc">India — WellSync AI at IIT Hyderabad</div>
+                    <div class="achievement-context">National Level · AI Healthcare</div>
+                </div>
+                <div class="achievement-card reveal" style="--i:1">
+                    <span class="achievement-icon">🥇</span>
+                    <div class="achievement-title">Top 15</div>
+                    <div class="achievement-desc">Out of 800+ teams — Spendrift Fintech</div>
+                    <div class="achievement-context">Global Competition</div>
+                </div>
+                <div class="achievement-card reveal" style="--i:2">
+                    <span class="achievement-icon">📊</span>
+                    <div class="achievement-title">9+ CGPA</div>
+                    <div class="achievement-desc">Computer Engineering — Consistent Academic Excellence</div>
+                    <div class="achievement-context">Fr. CRCE, Mumbai</div>
+                </div>
+                <div class="achievement-card reveal" style="--i:3">
+                    <span class="achievement-icon">🎤</span>
+                    <div class="achievement-title">TEDx</div>
+                    <div class="achievement-desc">Design Manager — Led full brand & event design</div>
+                    <div class="achievement-context">TEDx CRCE</div>
+                </div>
+                <div class="achievement-card reveal" style="--i:4">
+                    <span class="achievement-icon">🚀</span>
+                    <div class="achievement-title">8+</div>
+                    <div class="achievement-desc">Hackathons — Consistent Top Performer</div>
+                    <div class="achievement-context">Research · Design · Leadership</div>
+                </div>
+                <div class="achievement-card reveal" style="--i:5">
+                    <span class="achievement-icon">🎓</span>
+                    <div class="achievement-title">97.21%</div>
+                    <div class="achievement-desc">MHT-CET Percentile — Top Performer</div>
+                    <div class="achievement-context">State Level Entrance</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== GALLERY: Photography / Art / Videos ===== -->
+    <section class="gallery-section section" id="gallery">
+        <div class="container">
+            <div class="section-label reveal">Creative Work</div>
+            <h2 class="section-heading reveal">Beyond<br /><em>the screen.</em></h2>
+            <p class="section-subheading reveal">Photography, art, crochet, painting, and videography — creativity
+                isn't just my profession, it's how I see the world.</p>
+
+            <!-- Photography -->
+            <h3 class="mono" style="margin-bottom: 24px; margin-top: 48px; font-size: 0.75rem; letter-spacing: 0.2em; color: var(--royal-purple);">
+                Photography · <a href="https://instagram.com/capturedbysrush" target="_blank" style="color: var(--royal-purple); text-decoration: underline;">@capturedbysrush</a>
+            </h3>
+            <div class="gallery-grid reveal">
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="3" y="3" width="18" height="18" rx="2" />
+                            <circle cx="8.5" cy="8.5" r="1.5" />
+                            <polyline points="21 15 16 10 5 21" />
+                        </svg>
+                        <span>Photo 1</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="3" y="3" width="18" height="18" rx="2" />
+                            <circle cx="8.5" cy="8.5" r="1.5" />
+                            <polyline points="21 15 16 10 5 21" />
+                        </svg>
+                        <span>Photo 2</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="3" y="3" width="18" height="18" rx="2" />
+                            <circle cx="8.5" cy="8.5" r="1.5" />
+                            <polyline points="21 15 16 10 5 21" />
+                        </svg>
+                        <span>Photo 3</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="3" y="3" width="18" height="18" rx="2" />
+                            <circle cx="8.5" cy="8.5" r="1.5" />
+                            <polyline points="21 15 16 10 5 21" />
+                        </svg>
+                        <span>Photo 4</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Art & Craft -->
+            <h3 class="mono" style="margin-bottom: 24px; margin-top: 60px; font-size: 0.75rem; letter-spacing: 0.2em; color: var(--royal-purple);">
+                Art · Sketches · Crochet · Paintings
+            </h3>
+            <div class="gallery-grid reveal">
+                <div class="gallery-item art-item">
+                    <div class="gallery-placeholder">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 19l7-7 3 3-7 7-3-3z" />
+                            <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" />
+                            <path d="M2 2l7.586 7.586" />
+                            <circle cx="11" cy="11" r="2" />
+                        </svg>
+                        <span>Artwork 1</span>
+                    </div>
+                </div>
+                <div class="gallery-item art-item">
+                    <div class="gallery-placeholder">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 19l7-7 3 3-7 7-3-3z" />
+                            <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" />
+                            <path d="M2 2l7.586 7.586" />
+                            <circle cx="11" cy="11" r="2" />
+                        </svg>
+                        <span>Artwork 2</span>
+                    </div>
+                </div>
+                <div class="gallery-item art-item">
+                    <div class="gallery-placeholder">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 19l7-7 3 3-7 7-3-3z" />
+                            <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" />
+                            <path d="M2 2l7.586 7.586" />
+                            <circle cx="11" cy="11" r="2" />
+                        </svg>
+                        <span>Artwork 3</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="contact-section section" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div>
+                    <div class="section-label reveal">Get In Touch</div>
+                    <h2 class="contact-heading reveal">Let's build something<br /><em>meaningful</em> together.</h2>
+                    <p class="contact-text reveal">
+                        Whether it's a product idea, a design collaboration, a hackathon team,
+                        or just a creative conversation — I'd love to hear from you.
+                    </p>
+
+                    <!-- Paper Airplane SVG -->
+                    <div class="paper-airplane-container reveal">
+                        <svg class="paper-airplane" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 60 L110 10 L70 110 L55 70 Z" fill="none" stroke="var(--royal-purple)"
+                                stroke-width="2" />
+                            <path d="M55 70 L110 10" stroke="var(--royal-purple)" stroke-width="2" />
+                            <circle cx="55" cy="70" r="3" fill="var(--royal-purple)" opacity="0.5" />
+                        </svg>
+                    </div>
+
+                    <div class="contact-socials reveal">
+                        <a href="https://www.linkedin.com/in/srushti-murade-03bb21333/" target="_blank"
+                            rel="noopener noreferrer" aria-label="LinkedIn" class="social-link" id="social-linkedin">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                            </svg>
+                        </a>
+                        <a href="https://github.com/Srushti-09" target="_blank" rel="noopener noreferrer"
+                            aria-label="GitHub" class="social-link" id="social-github">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.605-.015 2.896-.015 3.286 0 .315.21.694.825.576C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/srush__9906/" target="_blank" rel="noopener noreferrer"
+                            aria-label="Instagram" class="social-link" id="social-instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                            </svg>
+                        </a>
+                        <a href="https://instagram.com/capturedbysrush" target="_blank" rel="noopener noreferrer"
+                            aria-label="Photography Instagram" class="social-link" id="social-photography">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+                                <circle cx="12" cy="13" r="4"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <form class="contact-form reveal-right" id="contact-form">
+                        <div class="form-group">
+                            <input type="text" class="form-input" id="contact-name" name="name" placeholder=" "
+                                required />
+                            <label class="form-label" for="contact-name">Your Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-input" id="contact-email" name="email" placeholder=" "
+                                required />
+                            <label class="form-label" for="contact-email">Email Address</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-textarea" id="contact-message" name="message" placeholder=" " rows="4"
+                                required></textarea>
+                            <label class="form-label" for="contact-message">Your Message</label>
+                        </div>
+                        <button type="submit" class="form-submit magnetic-btn">
+                            <span>Send Message</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">Srushti Murade<span style="color: var(--royal-purple);">.</span></div>
+                <div class="footer-links">
+                    <a href="mailto:thesrush99@gmail.com">thesrush99@gmail.com</a>
+                    <a href="tel:9372833896">+91 93728 33896</a>
+                </div>
+                <p class="footer-copy">&copy; 2026 Srushti Murade. Designed with love.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== EASTER EGG OVERLAY ===== -->
+    <div class="easter-egg-overlay" id="easter-egg">
+        <div class="easter-egg-message">
+            ✨ You found the secret! ✨<br />
+            <span style="font-size: 0.5em; color: var(--royal-purple);">
+                "Creativity is intelligence having fun." — Einstein
+            </span>
+        </div>
+    </div>
+
+    <!-- ===== SCRIPTS ===== -->
+    <!-- GSAP + ScrollTrigger CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
