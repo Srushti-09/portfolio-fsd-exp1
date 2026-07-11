@@ -1048,23 +1048,25 @@ html[data-theme="dark"] .site-nav.scrolled {
   font-family: var(--font-serif);
   font-size: clamp(1.5rem, 3vw, 2.5rem);
   font-weight: 700;
-  color: transparent;
-  -webkit-text-stroke: 1px rgba(42, 42, 42, 0.15);
+  color: var(--charcoal);
+  -webkit-text-stroke: 1px var(--charcoal);
   text-transform: uppercase;
   padding: 0 clamp(16px, 3vw, 40px);
   transition: all 0.4s ease;
   letter-spacing: 0.02em;
+  opacity: 0.6;
 }
 
 .marquee-item:hover {
-  color: var(--deep-black);
-  -webkit-text-stroke: 1px var(--deep-black);
+  color: var(--royal-purple);
+  -webkit-text-stroke: 1px var(--royal-purple);
+  opacity: 1;
 }
 
 .marquee-star {
   color: var(--royal-purple);
   font-size: 1rem;
-  opacity: 0.5;
+  opacity: 0.8;
 }
 
 @keyframes marquee-scroll {
