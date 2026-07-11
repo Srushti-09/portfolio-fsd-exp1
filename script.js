@@ -5,6 +5,7 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+    initThemeToggle();
     initLoadingScreen();
     initCustomCursor();
     initParticlesBackground();
@@ -564,4 +565,42 @@ function triggerEasterEgg() {
     setTimeout(() => {
         overlay.classList.remove('active');
     }, 4000);
+}
+
+/* ================================================================
+   10. DARK/LIGHT THEME TOGGLE
+   ================================================================ */
+function initThemeToggle() {
+    const desktopToggle = document.getElementById('theme-toggle');
+    const mobileToggle = document.getElementById('theme-toggle-mobile');
+    
+    // Check saved theme or system preference
+    const savedTheme = localStorage.getItem('theme');
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    const initialTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+    setTheme(initialTheme);
+
+    function setTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        
+        // Update toggle icons
+        const icon = theme === 'dark' ? '☀️' : '🌙';
+        if (desktopToggle) desktopToggle.textContent = icon;
+        if (mobileToggle) mobileToggle.textContent = icon;
+    }
+
+    function toggleTheme() {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        setTheme(newTheme);
+    }
+
+    if (desktopToggle) {
+        desktopToggle.addEventListener('click', toggleTheme);
+    }
+    if (mobileToggle) {
+        mobileToggle.addEventListener('click', toggleTheme);
+    }
 }
