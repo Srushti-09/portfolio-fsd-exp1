@@ -1048,19 +1048,18 @@ html[data-theme="dark"] .site-nav.scrolled {
   font-family: var(--font-serif);
   font-size: clamp(1.5rem, 3vw, 2.5rem);
   font-weight: 700;
-  color: var(--charcoal);
+  color: transparent;
   -webkit-text-stroke: 1px var(--charcoal);
   text-transform: uppercase;
   padding: 0 clamp(16px, 3vw, 40px);
   transition: all 0.4s ease;
   letter-spacing: 0.02em;
-  opacity: 0.6;
+  opacity: 1;
 }
 
 .marquee-item:hover {
   color: var(--royal-purple);
   -webkit-text-stroke: 1px var(--royal-purple);
-  opacity: 1;
 }
 
 .marquee-star {
